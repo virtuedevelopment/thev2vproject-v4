@@ -1,0 +1,95 @@
+.main {
+  background-color: var(--main-white);
+  min-height: 100svh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  overflow: hidden;
+}
+.main img {
+  filter: blur(70px);
+  animation: var(--rotate);
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+.main h1 {
+  font-size: var(--heading);
+  text-align: center;
+  z-index: 2;
+  color: var(--accent-black);
+}
+.main h2 {
+  font-size: 3rem;
+  text-align: center;
+  z-index: 2;
+  opacity: 0;
+  animation: fadeInUp 1s forwards;
+  animation-delay: 1.6s;
+}
+.main h2 span {
+  color: var(--primary-main);
+  z-index: 2;
+}
+.main small {
+  font-size: 1.25rem;
+  color: var(--main-black);
+  z-index: 2;
+  opacity: 0;
+  animation: fadeInUp 1s forwards;
+  animation-delay: 1.6s;
+}
+.fadeInUpSpan {
+  opacity: 0;
+  display: inline-block;
+  animation: fadeInUp 0.5s forwards;
+}
+.socialLinks{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem ;
+  gap: 2rem;
+  z-index: 2;
+}
+.socialLinks a{
+  width: 25px;
+  height: 25px;
+  color: var(--primary-main);
+  opacity: 0;
+  animation: fadeInUp 1s forwards;
+  animation-delay: 1.6s;
+  transition: ease-in-out 0.3s;
+}
+.socialLinks a:hover{
+  color: var(--secondary-main);
+  transition: ease-in-out 0.3s;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width:750px) {
+  .main h2{
+    font-size: 1.5rem;
+    width: 60%;
+  }
+  .main small{
+    text-align: center;
+    width: 60%;
+  }
+}
