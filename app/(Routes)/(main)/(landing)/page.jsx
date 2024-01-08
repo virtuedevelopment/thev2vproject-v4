@@ -10,7 +10,7 @@ export default function Landing() {
     <main>
       <section className={styles.main}>
 
-        <small>Our website is currently under maintanance. We'll be back soon.</small>
+        <small>Our website is currently under maintanance. We will be back soon.</small>
         <Image
           src={"/landing_graphic.svg"}
           width={500}
