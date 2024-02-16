@@ -1,0 +1,159 @@
+.hero {
+  min-height: 90svh;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  position: relative;
+}
+.hero .backgroundGraphic {
+  filter: blur(100px);
+  animation: var(--rotate);
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 0;
+}
+.heroInformation {
+  width: 100%;
+  z-index: 1;
+  opacity: 0;
+  animation: var(--fade-in);
+  animation-delay: 0.5s;
+}
+.heroInformation h1 {
+  font-size: var(--header-xl);
+  color: var(--accent-black);
+  margin-bottom: 2rem;
+}
+.heroInformation h1 span {
+  display: inline;
+  color: var(--primary-main);
+}
+.heroInformation span {
+  display: flex;
+  gap: 1rem;
+}
+
+.features {
+  position: relative;
+  overflow-y: hidden;
+}
+.features .backgroundGraphic {
+  position: absolute;
+  width: 100%;
+  opacity: 0.25;
+  bottom: -50px;
+  left: 0;
+  z-index: 0;
+}
+.featureList {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 1.5rem 0;
+  gap: 1.5rem;
+}
+
+.highlights {
+  width: 100%;
+  min-height: 90svh;
+  position: relative;
+  padding: 2.5rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.highlights img {
+  position: absolute;
+  width: 100%;
+  height: 90svh;
+  object-fit: cover;
+  z-index: 0;
+  top: 0;
+  left: 0;
+}
+.highlights div {
+  z-index: 1;
+  position: relative;
+  width: 65%;
+  background: rgba(44, 44, 58, 0.4);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5.4px);
+  -webkit-backdrop-filter: blur(5.4px);
+  border-radius: var(--border-rad);
+  padding: var(--section-padding-tablet);
+  text-align: center;
+}
+.highlights div h2 {
+  font-size: var(--subhead);
+  color: var(--secondary-main);
+  margin-bottom: 1rem;
+}
+.highlights div p {
+  width: 80%;
+  margin: auto;
+  line-height: 2;
+  color: var(--main-white);
+}
+
+@media (max-width: 1100px) {
+  .heroInformation h1 {
+    font-size: var(--subhead);
+  }
+}
+@media (max-width: 750px) {
+  .hero {
+    flex-direction: column;
+    justify-content: center;
+    gap: 2.5rem;
+  }
+  .hero .backgroundGraphic {
+    filter: blur(100px);
+    animation: var(--rotate);
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 0;
+    width: 150px;
+    height: 150px;
+  }
+  .heroInformation {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .heroImage {
+    width: 100%;
+  }
+  .heroImage img {
+    width: 100%;
+  }
+  .features .backgroundGraphic {
+    bottom: -150px;
+  }
+  .highlights{
+    padding: 1rem;
+  }
+  .highlights div{
+    width: 95%;
+  }
+  .highlights div h2 {
+    font-size: var(--subtitles);
+  }
+  .highlights div p {
+    width: 100%;
+    line-height: 1.5;
+    font-size: var(--small-text);
+  }
+}

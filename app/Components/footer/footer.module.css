@@ -1,0 +1,18 @@
+.footer{
+    padding: var(--section-padding-mobile);
+    background-color: var(--main-white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    text-align: center;
+}
+.footer h1{
+    color: var(--primary-main);
+    font-size: var(--header);
+}
+.footer small{
+    color: var(--primary-dark);
+    font-weight: 500;
+}
