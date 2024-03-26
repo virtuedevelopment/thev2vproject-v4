@@ -1,28 +1,45 @@
 .navbar {
   padding: var(--navigation-padding);
   background-color: var(--main-white);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  -webkit-box-shadow: 0px 10px 13px -7px #000000,
-    0px 6px 34px 4px rgba(0, 0, 0, 0);
-  box-shadow: 0px 10px 13px -7px #000000, 0px 6px 34px 4px rgba(0, 0, 0, 0);
-}
-.navbar ul {
-  width: 35%;
+  border-radius: var(--border-rad);
+
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.navbar ul li a {
-  width: 25%;
-  font-weight: 500;
-  color: var(--primary-main);
+.menuOptions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 2.5rem;
+}
+.menuRoutes {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1.5rem;
+}
+.menuLink {
+  padding: 0.35rem 1.5rem;
+  color: var(--main-black);
+  border-radius: var(--border-rad);
   transition: var(--transition-out);
 }
-.navbar ul li a:hover {
+.menuLink:hover {
   transition: var(--transition-in);
+  color: var(--primary-main);
+}
+.menuLinkCurrent {
+  color: var(--main-black);
+  background-color: var(--main-grey);
+  padding: 0.35rem 1.5rem;
+  border-radius: var(--border-rad);
+  transition: var(--transition-out);
+}
+.menuLinkCurrent:hover {
+  background-color: var(--main-white);
   color: var(--secondary-main);
+  transition: var(--transition-in);
 }
 
 .mobileNavButton {
@@ -33,6 +50,7 @@
   color: var(--secondary-main);
   transition: var(--transition-out);
   display: none;
+  border-radius: var(--border-rad);
 }
 .mobileNavButton:hover {
   transition: var(--transition-in);
@@ -57,11 +75,12 @@
 .asideMenu div {
   padding: 1rem 0;
   display: grid;
-  gap: 0.75rem;
+  gap: 1rem;
 }
 .asideMenu div a {
   font-size: var(--highlight);
   color: var(--primary-main);
+  font-weight: 600;
   text-align: right;
 }
 .isClosed {
@@ -74,11 +93,12 @@
   .asideMenu {
     display: block;
   }
+
   .navbar {
     padding: var(--navigation-padding-tablet);
   }
 
-  .navbar ul {
+  .menuOptions{
     display: none;
   }
 

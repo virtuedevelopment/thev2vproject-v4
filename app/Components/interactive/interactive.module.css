@@ -1,0 +1,36 @@
+/* Button themes */
+.main {
+  background-color: var(--primary-main);
+  border-radius: var(--border-rad);
+  transition: var(--transition-out);
+  padding: 0.75rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: var(--main-white);
+  font-weight: 600;
+}
+.main:hover {
+  transition: var(--transition-in);
+  background-color: var(--secondary-main);
+  color: var(--primary-main);
+}
+
+.secondary {
+    background-color: var(--secondary-main);
+    border-radius: var(--border-rad);
+    transition: var(--transition-out);
+    padding: 0.75rem 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    color: var(--main-black);
+    font-weight: 600;
+  }
+  .secondary:hover {
+    transition: var(--transition-in);
+    background-color: var(--main-black);
+    color: var(--secondary-main);
+  }

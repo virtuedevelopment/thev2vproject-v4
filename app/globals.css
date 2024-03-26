@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
 
 :root {
   --main-black: #16161d;
@@ -7,6 +7,8 @@
   --main-white: #f7f7f7;
   --accent-white: #c4c4c4;
   --accent-white-lite: #fff;
+
+  --main-grey: #d9d9d9;
 
   --primary-dark: #571494;
   --primary-main: #8a2be2;
@@ -24,7 +26,7 @@
 
   --container-padding: 0.5rem 2.25rem;
 
-  --navigation-padding: 1rem 5rem;
+  --navigation-padding: 1rem 2.75rem;
   --navigation-padding-tablet: 0.75rem 2.25rem;
   --navigation-padding-mobile: 0.75rem 1.25rem;
 
@@ -46,7 +48,7 @@
   --transition-in: 0.3s ease-in-out;
   --transition-out: 0.75s ease-in-out;
 
-  --shadow-bottom: 0px 5px 10px 0px rgba(44,44,58,0.15);
+  --shadow-bottom: 0px 5px 10px 0px rgba(44, 44, 58, 0.15);
 }
 
 /* Normalize */
@@ -69,21 +71,30 @@ main {
 .announcement-bar {
   background-color: var(--primary-main);
   padding: var(--container-padding);
+  color: var(--secondary-light);
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
+  gap: 1rem;
 }
 .announcement-bar p {
-  color: var(--secondary-light);
   font-size: var(--small-text);
+  font-weight: 500;
+}
+.announcement-bar svg {
+  width: 15px;
+  height: 15px;
 }
 
 .logo {
-  font-size: var(--highlight);
+  font-size: var(--subtitles);
   color: var(--primary-main);
   transition: var(--transition-out);
   font-weight: 600;
+}
+.logo span {
+  color: var(--secondary-main);
 }
 .logo:hover {
   color: var(--secondary-main);
@@ -138,7 +149,7 @@ main {
   height: 375px;
   padding: 1rem;
   border-radius: var(--border-rad);
-  background: rgba(44, 44, 58, 0.40);
+  background: rgba(44, 44, 58, 0.4);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(5.4px);
   -webkit-backdrop-filter: blur(5.4px);
@@ -150,21 +161,21 @@ main {
   gap: 0.75rem;
   text-align: center;
 }
-.card h3{
+.card h3 {
   color: var(--secondary-main);
 }
-.card p{
+.card p {
   font-size: var(--small-text);
   color: var(--main-white);
   width: 85%;
 }
-.card svg{
+.card svg {
   width: 50px;
   height: 50px;
   color: var(--secondary-main);
 }
 
-.not-available{
+.not-available {
   width: 100%;
   height: 100svh;
   display: flex;
@@ -174,29 +185,29 @@ main {
   gap: 0.75rem;
   text-align: center;
 }
-.not-available h1{
+.not-available h1 {
   color: var(--primary-main);
   font-size: var(--header);
 }
-.not-available p{
+.not-available p {
   width: 75%;
   font-size: var(--highlight);
   font-weight: 200;
   line-height: 1.75;
   color: var(--accent-black);
 }
-.not-available a{
+.not-available a {
   color: var(--primary-light);
   text-decoration: underline;
 }
 
-.inputbox{
+.inputbox {
   width: 100%;
   background-color: var(--main-white);
   border-radius: var(--border-rad);
   padding: var(--form-padding);
 }
-.inputbox small{
+.inputbox small {
   display: block;
   color: var(--primary-dark);
   font-size: var(--tiny-text);
@@ -204,7 +215,7 @@ main {
   padding: 0 0.25rem;
   font-weight: 600;
 }
-.inputbox input{
+.inputbox input {
   border: none;
   padding: 0.5rem 0.25rem;
   width: 100%;
@@ -214,7 +225,7 @@ main {
   color: var(--accent-black);
   font-family: "Rubik", sans-serif;
 }
-.inputbox textarea{
+.inputbox textarea {
   width: 100%;
   height: 75px;
   resize: none;
@@ -227,7 +238,7 @@ main {
   font-family: "Rubik", sans-serif;
 }
 
-.success{
+.success {
   color: green;
 }
 
@@ -278,10 +289,10 @@ main {
     display: none;
   }
 
-  .not-available h1{
+  .not-available h1 {
     font-size: var(--subtitles);
   }
-  .not-available p{
+  .not-available p {
     width: 95%;
     font-size: var(--body-text);
     font-weight: 200;

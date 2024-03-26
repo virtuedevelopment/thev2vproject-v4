@@ -1,9 +1,11 @@
 .hero {
-  min-height: 90svh;
+  min-height: 100svh;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: flex-start;
+  gap: 3.5rem;
   position: relative;
+  border-radius: var(--border-rad);
 }
 .hero .backgroundGraphic {
   filter: blur(100px);
@@ -17,7 +19,7 @@
   z-index: 0;
 }
 .heroInformation {
-  width: 100%;
+  width: 70%;
   z-index: 1;
   opacity: 0;
   animation: var(--fade-in);
@@ -35,6 +37,9 @@
 .heroInformation span {
   display: flex;
   gap: 1rem;
+}
+.heroImg{
+  rotate: 10deg;
 }
 
 .features {
@@ -142,10 +147,10 @@
   .features .backgroundGraphic {
     bottom: -150px;
   }
-  .highlights{
+  .highlights {
     padding: 1rem;
   }
-  .highlights div{
+  .highlights div {
     width: 95%;
   }
   .highlights div h2 {

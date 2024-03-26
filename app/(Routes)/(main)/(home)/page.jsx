@@ -2,10 +2,17 @@ import React from "react";
 import Landing from "../(landing)/Landing";
 import Image from "next/image";
 import Link from "next/link";
+import Href from "@/app/Components/interactive/Href";
 import styles from "./home.module.css";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPeopleGroup, faPeopleRoof, faBookOpenReader } from "@fortawesome/free-solid-svg-icons";
+import {
+  faPeopleGroup,
+  faPeopleRoof,
+  faBookOpenReader,
+  faBook,
+  faPlusSquare,
+} from "@fortawesome/free-solid-svg-icons";
 import Highlights from "./Highlights";
 
 export default function Home() {
@@ -26,18 +33,22 @@ export default function Home() {
             community.
           </h1>
           <span>
-            <Link href={"/about"} className="button-main">
-              ABOUT US
-            </Link>
-            <Link href={"/community"} className="button-main">
-              COMMUNITY
-            </Link>
+            <Href
+              title={"About Us"}
+              icon={faBook}
+              url={"/about"}
+              theme={"main"}
+            />
+            <Href
+              title={"Community"}
+              icon={faPlusSquare}
+              url={"/community"}
+              theme={"secondary"}
+            />
           </span>
         </div>
 
-        
-        
-
+        <img src={'/phone.svg'} alt="phone photo" className={styles.heroImg}/>
       </section>
 
       <section style={{ marginBlock: "2.5rem" }} className={styles.features}>
@@ -93,8 +104,7 @@ export default function Home() {
       </section>
 
       {/* HIGHLIGHTS COMPONENT */}
-      <Highlights/>
-
+      <Highlights />
     </main>
   );
 }
